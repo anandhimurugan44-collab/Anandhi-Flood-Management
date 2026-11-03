@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Flood Monitoring</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <div class="logo">
+            🌊 AI Flood Management
+        </div>
+
+        <nav>
+
+            
+
+             <a href="index.html">Home</a>
+               <a href="monitoring.html" class="active">Monitoring</a>
+               <a href="prediction.html">Prediction</a>
+               <a href="flood-map.html">Flood Map</a>
+               <a href="alerts.html">Alerts</a>
+               <a href="dashboard.html">Dashboard</a>
+               <a href="drainage.html">Drainage</a>
+               <a href="evacuation.html">Evacuation</a>
+               <a href="rainfall.html">Rainfall</a>
+               <a href="mitigation.html">Mitigation</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="page-header">
+
+        <p class="tag">
+            REAL-TIME MONITORING
+        </p>
+
+        <h1>
+            Flood Monitoring & Analysis
+        </h1>
+
+        <p>
+            Monitor rainfall, water levels, drainage conditions
+            and road flooding.
+        </p>
+
+    </section>
+
+
+    <!-- Monitoring Cards -->
+
+    <section class="section">
+
+        <h2>Current Conditions</h2>
+
+        <div class="monitor-card">
+
+    <h3>🌧️ Rainfall</h3>
+
+    <div id="monitorRainfall">
+        30 mm
+    </div>
+
+    <p>Last 24 hours</p>
+
+</div>
+
+
+<div class="monitor-card">
+
+    <h3>💧 Water Level</h3>
+
+    <div id="monitorWaterLevel">
+        1.0 m
+    </div>
+
+    <p>Current level</p>
+
+</div>
+
+
+<div class="monitor-card">
+
+    <h3>⚠️ Flood Risk</h3>
+
+    <div id="monitorRisk">
+        HIGH
+    </div>
+
+    <p>Current assessment</p>
+
+</div>
+            <!-- Drainage -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🚧
+                </div>
+
+                <h3>
+                    Drainage
+                </h3>
+
+                <p id="monitorDrainage">
+                    Normal
+                </p>
+
+                <span>
+                    Drainage network
+                </span>
+
+            </div>
+
+
+            <!-- Road -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🛣️
+                </div>
+
+                <h3>
+                    Road Status
+                </h3>
+
+                <p id="monitorRoad">
+                    Safe
+                </p>
+
+                <span>
+                    Current condition
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Monitoring Table -->
+
+    <section class="section">
+
+        <h2>
+            Monitoring Stations
+        </h2>
+
+        <p class="section-description">
+            Current readings from different monitoring locations.
+        </p>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Station
+                        </th>
+
+                        <th>
+                            Rainfall
+                        </th>
+
+                        <th>
+                            Water Level
+                        </th>
+
+                        <th>
+                            Drainage
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Riverside Station
+                        </td>
+
+                        <td>
+                            95 mm
+                        </td>
+
+                        <td>
+                            2.8 m
+                        </td>
+
+                        <td>
+                            Blocked
+                        </td>
+
+                        <td>
+                            🔴 High Risk
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Central Station
+                        </td>
+
+                        <td>
+                            72 mm
+                        </td>
+
+                        <td>
+                            2.3 m
+                        </td>
+
+                        <td>
+                            Normal
+                        </td>
+
+                        <td>
+                            🟠 Medium Risk
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            North Station
+                        </td>
+
+                        <td>
+                            45 mm
+                        </td>
+
+                        <td>
+                            1.6 m
+                        </td>
+
+                        <td>
+                            Normal
+                        </td>
+
+                        <td>
+                            🟢 Safe
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            East Station
+                        </td>
+
+                        <td>
+                            65 mm
+                        </td>
+
+                        <td>
+                            2.1 m
+                        </td>
+
+                        <td>
+                            Partial Blockage
+                        </td>
+
+                        <td>
+                            🟠 Medium Risk
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- Drainage Monitoring -->
+
+    <section class="prediction-section">
+
+        <div class="prediction-box">
+
+            <div>
+
+                <p class="tag">
+                    DRAINAGE ANALYSIS
+                </p>
+
+                <h2>
+                    Drainage Network Monitoring
+                </h2>
+
+                <p>
+                    The system monitors drainage conditions to identify
+                    possible blockages that can increase urban flooding.
+                </p>
+
+                <button onclick="checkDrainage()">
+                    Check Drainage
+                </button>
+
+            </div>
+
+
+            <div class="risk-card">
+
+                <span>
+                    Drainage Status
+                </span>
+
+                <h2 id="drainageResult">
+                    NORMAL
+                </h2>
+
+                <p id="drainageMessage">
+                    Drainage network is operating normally.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Update Button -->
+
+    <section class="section">
+
+        <div style="text-align:center;">
+
+            <h2>
+                Update Monitoring Data
+            </h2>
+
+            <p class="section-description">
+                Simulate new sensor readings.
+            </p>
+
+            <button onclick="updateMonitoringData()">
+                🔄 Update Data
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🌊 AI-Based Flood Management System
+        </h3>
+
+        <p>
+            Smart Monitoring • Prediction • Early Warning • Mitigation
+        </p>
+
+        <p class="copyright">
+            © 2026 AI Flood Management Project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

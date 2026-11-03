@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Flood Risk Map</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <div class="logo">
+            🌊 AI Flood Management
+        </div>
+
+        <nav>
+
+             <a href="index.html">Home</a>
+               <a href="monitoring.html">Monitoring</a>
+               <a href="prediction.html">Prediction</a>
+               <a href="flood-map.html" class="active">Flood Map</a>
+               <a href="alerts.html">Alerts</a>
+               <a href="dashboard.html">Dashboard</a>
+               <a href="drainage.html">Drainage</a>
+               <a href="evacuation.html">Evacuation</a>
+               <a href="rainfall.html">Rainfall</a>
+               <a href="mitigation.html">Mitigation</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="page-header">
+
+        <p class="tag">
+            FLOOD RISK VISUALIZATION
+        </p>
+
+        <h1>
+            Flood-Prone Area Map
+        </h1>
+
+        <p>
+            Identify locations that require increased flood monitoring.
+        </p>
+
+    </section>
+
+
+    <!-- Map Section -->
+
+    <section class="section">
+
+        <div class="map-page-container">
+
+            <!-- Map -->
+
+            <div class="interactive-map">
+
+                <div class="map-heading">
+                    🗺️ Flood Risk Monitoring Map
+                </div>
+
+
+                <!-- High Risk -->
+
+                <div class="map-zone high-zone">
+                    HIGH RISK
+                </div>
+
+
+                <!-- Medium Risk -->
+
+                <div class="map-zone medium-zone">
+                    MEDIUM RISK
+                </div>
+
+
+                <!-- Low Risk -->
+
+                <div class="map-zone low-zone">
+                    LOW RISK
+                </div>
+
+
+                <!-- Roads -->
+
+                <div class="road road-one"></div>
+
+                <div class="road road-two"></div>
+
+                <div class="road road-three"></div>
+
+
+                <!-- Locations -->
+
+                <button class="map-marker marker-one"
+                        onclick="showLocation('Riverside Area', 'High')">
+                    📍
+                </button>
+
+                <button class="map-marker marker-two"
+                        onclick="showLocation('Central Lowland', 'Medium')">
+                    📍
+                </button>
+
+                <button class="map-marker marker-three"
+                        onclick="showLocation('North Residential Area', 'Low')">
+                    📍
+                </button>
+
+                <button class="map-marker marker-four"
+                        onclick="showLocation('East Junction', 'Medium')">
+                    📍
+                </button>
+
+            </div>
+
+
+            <!-- Map Information -->
+
+            <div class="map-sidebar">
+
+                <h2>
+                    Risk Areas
+                </h2>
+
+
+                <div class="location-card high-card"
+                     onclick="showLocation('Riverside Area', 'High')">
+
+                    <h3>
+                        🔴 Riverside Area
+                    </h3>
+
+                    <p>
+                        High flood probability
+                    </p>
+
+                </div>
+
+
+                <div class="location-card medium-card"
+                     onclick="showLocation('Central Lowland', 'Medium')">
+
+                    <h3>
+                        🟠 Central Lowland
+                    </h3>
+
+                    <p>
+                        Moderate flood probability
+                    </p>
+
+                </div>
+
+
+                <div class="location-card low-card"
+                     onclick="showLocation('North Residential Area', 'Low')">
+
+                    <h3>
+                        🟢 North Residential Area
+                    </h3>
+
+                    <p>
+                        Low flood probability
+                    </p>
+
+                </div>
+
+
+                <div class="location-card medium-card"
+                     onclick="showLocation('East Junction', 'Medium')">
+
+                    <h3>
+                        🟠 East Junction
+                    </h3>
+
+                    <p>
+                        Moderate flood probability
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Location Result -->
+
+    <section class="section">
+
+        <div class="location-result">
+
+            <h2>
+                Selected Location
+            </h2>
+
+            <p id="selectedLocation">
+                Click a location on the map to view details.
+            </p>
+
+            <div id="locationRisk">
+                --
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Statistics -->
+
+    <section class="section statistics-section">
+
+        <h2>
+            Flood Risk Statistics
+        </h2>
+
+        <p class="section-description">
+            Current estimated distribution of monitored areas.
+        </p>
+
+
+        <div class="statistics">
+
+            <div class="stat-card">
+
+                <div class="stat-number">
+                    12
+                </div>
+
+                <h3>
+                    Total Areas
+                </h3>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-number">
+                    4
+                </div>
+
+                <h3>
+                    High Risk
+                </h3>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-number">
+                    5
+                </div>
+
+                <h3>
+                    Medium Risk
+                </h3>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-number">
+                    3
+                </div>
+
+                <h3>
+                    Low Risk
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🌊 AI-Based Flood Management System
+        </h3>
+
+        <p>
+            Smart Monitoring • Prediction • Early Warning • Mitigation
+        </p>
+
+        <p class="copyright">
+            © 2026 AI Flood Management Project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
