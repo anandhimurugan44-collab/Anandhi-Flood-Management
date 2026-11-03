@@ -1,7 +1,7 @@
 // =====================================
 // CONFIG
 // =====================================
-const BACKEND_URL = "https://ai-flood-management.onrender.com";
+const BACKEND_URL = "https://ai-flood-management-1.onrender.com";
 const REFRESH_INTERVAL = 15000; // 15 s (Render free tier can be slow to wake up)
 
 // =====================================
