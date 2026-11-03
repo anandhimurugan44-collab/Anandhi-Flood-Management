@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Flood Analytics Dashboard</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+
+        <div class="logo">
+            🌊 AI Flood Management
+        </div>
+
+        <nav>
+
+             <a href="index.html">Home</a>
+               <a href="monitoring.html">Monitoring</a>
+               <a href="prediction.html">Prediction</a>
+               <a href="flood-map.html">Flood Map</a>
+               <a href="alerts.html">Alerts</a>
+               <a href="dashboard.html" class="active">Dashboard</a>
+               <a href="drainage.html">Drainage</a>
+               <a href="evacuation.html">Evacuation</a>
+               <a href="rainfall.html">Rainfall</a>
+               <a href="mitigation.html">Mitigation</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="page-header">
+
+        <p class="tag">
+            SYSTEM ANALYTICS
+        </p>
+
+        <h1>
+            Flood Management Dashboard
+        </h1>
+
+        <p>
+            Analyze current flood conditions and system status.
+        </p>
+
+    </section>
+
+
+    <!-- Summary Cards -->
+
+    <section class="section">
+
+        <h2>
+            Current Overview
+        </h2>
+
+        <div class="dashboard">
+
+            <div class="dashboard-card">
+
+                <h3>
+                    🌧️ Rainfall
+                </h3>
+
+                <div class="value"
+                     id="dashRainfall">
+                    82
+                </div>
+
+                <span>
+                    mm / 24 hours
+                </span>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h3>
+                    🌊 Water Level
+                </h3>
+
+                <div class="value"
+                     id="dashWater">
+                    2.4
+                </div>
+
+                <span>
+                    meters
+                </span>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h3>
+                    ⚠️ Risk Level
+                </h3>
+
+                <div class="value"
+                     id="dashRisk">
+                    HIGH
+                </div>
+
+                <span>
+                    Current prediction
+                </span>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h3>
+                    📍 Affected Areas
+                </h3>
+
+                <div class="value"
+                     id="affectedAreas">
+                    12
+                </div>
+
+                <span>
+                    Locations
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Analytics -->
+
+    <section class="section analytics-section">
+
+        <h2>
+            Rainfall & Water-Level Analysis
+        </h2>
+
+        <p class="section-description">
+            Recent environmental monitoring trends.
+        </p>
+
+
+        <div class="analytics-grid">
+
+            <!-- Rainfall Chart -->
+
+            <div class="analytics-card">
+
+                <h3>
+                    🌧️ Weekly Rainfall
+                </h3>
+
+                <div class="line-chart">
+
+                    <div class="chart-point"
+                         style="height: 35%;">
+                        Mon
+                    </div>
+
+                    <div class="chart-point"
+                         style="height: 50%;">
+                        Tue
+                    </div>
+
+                    <div class="chart-point"
+                         style="height: 42%;">
+                        Wed
+                    </div>
+
+                    <div class="chart-point"
+                         style="height: 68%;">
+                        Thu
+                    </div>
+
+                    <div class="chart-point"
+                         style="height: 90%;">
+                        Fri
+                    </div>
+
+                    <div class="chart-point"
+                         style="height: 65%;">
+                        Sat
+                    </div>
+
+                    <div class="chart-point"
+                         style="height: 55%;">
+                        Sun
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Risk Distribution -->
+
+            <div class="analytics-card">
+
+                <h3>
+                    ⚠️ Risk Distribution
+                </h3>
+
+                <div class="risk-distribution">
+
+                    <div class="distribution-item">
+
+                        <span>
+                            🔴 High
+                        </span>
+
+                        <strong>
+                            4 Areas
+                        </strong>
+
+                    </div>
+
+
+                    <div class="distribution-item">
+
+                        <span>
+                            🟠 Medium
+                        </span>
+
+                        <strong>
+                            5 Areas
+                        </strong>
+
+                    </div>
+
+
+                    <div class="distribution-item">
+
+                        <span>
+                            🟢 Low
+                        </span>
+
+                        <strong>
+                            3 Areas
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Recent Alerts -->
+
+    <section class="section">
+
+        <h2>
+            Recent Alerts
+        </h2>
+
+        <p class="section-description">
+            Latest system-generated flood warnings.
+        </p>
+
+
+        <div class="recent-alerts">
+
+            <div class="recent-alert">
+
+                <span>
+                    🔴
+                </span>
+
+                <div>
+
+                    <strong>
+                        High Flood Risk
+                    </strong>
+
+                    <p>
+                        Riverside Area
+                    </p>
+
+                </div>
+
+                <small>
+                    09:30 AM
+                </small>
+
+            </div>
+
+
+            <div class="recent-alert">
+
+                <span>
+                    🟠
+                </span>
+
+                <div>
+
+                    <strong>
+                        Water Level Rising
+                    </strong>
+
+                    <p>
+                        Central Lowland
+                    </p>
+
+                </div>
+
+                <small>
+                    08:45 AM
+                </small>
+
+            </div>
+
+
+            <div class="recent-alert">
+
+                <span>
+                    🟡
+                </span>
+
+                <div>
+
+                    <strong>
+                        Drainage Blockage
+                    </strong>
+
+                    <p>
+                        East Junction
+                    </p>
+
+                </div>
+
+                <small>
+                    07:20 AM
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- System Status -->
+
+    <section class="prediction-section">
+
+        <div class="system-status">
+
+            <div>
+
+                <p class="tag">
+                    SYSTEM STATUS
+                </p>
+
+                <h2>
+                    Monitoring System
+                </h2>
+
+                <p>
+                    The flood monitoring system is currently
+                    collecting and analyzing environmental data.
+                </p>
+
+            </div>
+
+
+            <div class="status-items">
+
+                <div class="status-item">
+                    🟢 Sensors
+                    <strong>Online</strong>
+                </div>
+
+                <div class="status-item">
+                    🟢 Monitoring
+                    <strong>Active</strong>
+                </div>
+
+                <div class="status-item">
+                    🟢 Prediction
+                    <strong>Ready</strong>
+                </div>
+
+                <div class="status-item">
+                    🟢 Alerts
+                    <strong>Active</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Update -->
+
+    <section class="section">
+
+        <div class="dashboard-update">
+
+            <h2>
+                Update Dashboard
+            </h2>
+
+            <p>
+                Simulate new monitoring data.
+            </p>
+
+            <button onclick="updateDashboardFromData()">
+                🔄 Update Monitoring Data
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🌊 AI-Based Flood Management System
+        </h3>
+
+        <p>
+            Smart Monitoring • Prediction • Early Warning • Mitigation
+        </p>
+
+        <p class="copyright">
+            © 2026 AI Flood Management Project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

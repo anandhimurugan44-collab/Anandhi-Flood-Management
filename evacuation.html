@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Evacuation & Safe Routes</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <div class="logo">
+            🌊 AI Flood Management
+        </div>
+
+        <nav>
+
+             <a href="index.html">Home</a>
+               <a href="monitoring.html">Monitoring</a>
+               <a href="prediction.html">Prediction</a>
+               <a href="flood-map.html">Flood Map</a>
+               <a href="alerts.html">Alerts</a>
+               <a href="dashboard.html">Dashboard</a>
+               <a href="drainage.html">Drainage</a>
+               <a href="evacuation.html" class="active">Evacuation</a>
+               <a href="rainfall.html">Rainfall</a>
+               <a href="mitigation.html">Mitigation</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="page-header">
+
+        <p class="tag">
+            EMERGENCY RESPONSE
+        </p>
+
+        <h1>
+            Evacuation & Safe Routes
+        </h1>
+
+        <p>
+            Identify nearby safe areas and recommended evacuation routes
+            during flood emergencies.
+        </p>
+
+    </section>
+
+
+    <!-- Emergency Status -->
+
+    <section class="section">
+
+        <div class="evacuation-status">
+
+            <div class="evacuation-icon">
+                🚨
+            </div>
+
+            <div>
+
+                <span class="alert-label">
+                    CURRENT EVACUATION STATUS
+                </span>
+
+                <h2 id="evacuationStatus">
+                    PREPAREDNESS MODE
+                </h2>
+
+                <p id="evacuationMessage">
+                    Monitor official alerts and remain prepared
+                    to move to a designated safe area if required.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Location Selection -->
+
+    <section class="section">
+
+        <h2>
+            Find Safe Route
+        </h2>
+
+        <p class="section-description">
+            Select a monitored area to view a simulated safe-route recommendation.
+        </p>
+
+
+        <div class="route-form">
+
+            <label for="locationSelect">
+                Select Location
+            </label>
+
+            <select id="locationSelect">
+
+                <option value="Riverside Area">
+                    Riverside Area
+                </option>
+
+                <option value="Central Lowland">
+                    Central Lowland
+                </option>
+
+                <option value="North Residential Area">
+                    North Residential Area
+                </option>
+
+                <option value="East Junction">
+                    East Junction
+                </option>
+
+            </select>
+
+
+            <button onclick="findSafeRoute()">
+                🗺️ Find Safe Route
+            </button>
+
+        </div>
+
+
+        <!-- Route Result -->
+
+        <div id="routeResult"
+             class="route-result">
+
+            <h3>
+                Route Recommendation
+            </h3>
+
+            <p>
+                Select a location and click
+                <strong>Find Safe Route</strong>.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Safe Shelters -->
+
+    <section class="section shelter-section">
+
+        <h2>
+            Designated Safe Areas
+        </h2>
+
+        <p class="section-description">
+            Example emergency shelters available in the monitored region.
+        </p>
+
+
+        <div class="shelters">
+
+            <div class="shelter-card">
+
+                <div class="shelter-icon">
+                    🏫
+                </div>
+
+                <h3>
+                    Government School
+                </h3>
+
+                <p>
+                    Capacity: 500 people
+                </p>
+
+                <span class="shelter-status">
+                    🟢 Available
+                </span>
+
+            </div>
+
+
+            <div class="shelter-card">
+
+                <div class="shelter-icon">
+                    🏥
+                </div>
+
+                <h3>
+                    Community Health Centre
+                </h3>
+
+                <p>
+                    Capacity: 300 people
+                </p>
+
+                <span class="shelter-status">
+                    🟢 Available
+                </span>
+
+            </div>
+
+
+            <div class="shelter-card">
+
+                <div class="shelter-icon">
+                    🏢
+                </div>
+
+                <h3>
+                    Community Hall
+                </h3>
+
+                <p>
+                    Capacity: 400 people
+                </p>
+
+                <span class="shelter-status">
+                    🟠 Limited Capacity
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Route Guidelines -->
+
+    <section class="prediction-section">
+
+        <div class="route-guidelines">
+
+            <div>
+
+                <p class="tag">
+                    SAFETY GUIDELINES
+                </p>
+
+                <h2>
+                    During a Flood Alert
+                </h2>
+
+            </div>
+
+
+            <div class="guidelines">
+
+                <div>
+                    <strong>01</strong>
+                    Follow official emergency instructions.
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    Move toward designated safe areas when advised.
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    Avoid flooded roads and drainage channels.
+                </div>
+
+                <div>
+                    <strong>04</strong>
+                    Keep emergency communication devices available.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🌊 AI-Based Flood Management System
+        </h3>
+
+        <p>
+            Smart Monitoring • Prediction • Early Warning • Mitigation
+        </p>
+
+        <p class="copyright">
+            © 2026 AI Flood Management Project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

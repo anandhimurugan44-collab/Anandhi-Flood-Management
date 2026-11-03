@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Flood Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <div class="logo">
+            🌊 AI Flood Management
+        </div>
+
+        <nav>
+
+             <a href="index.html">Home</a>
+               <a href="monitoring.html">Monitoring</a>
+               <a href="prediction.html" class="active">Prediction</a>
+               <a href="flood-map.html">Flood Map</a>
+               <a href="alerts.html">Alerts</a>
+               <a href="dashboard.html">Dashboard</a>
+               <a href="drainage.html">Drainage</a>
+               <a href="evacuation.html">Evacuation</a>
+               <a href="rainfall.html">Rainfall</a>
+               <a href="mitigation.html">Mitigation</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="page-header">
+
+        <p class="tag">
+            AI FLOOD PREDICTION
+        </p>
+
+        <h1>
+            Flood Risk Prediction
+        </h1>
+
+        <p>
+            Enter environmental conditions to estimate the
+            current flood risk.
+        </p>
+
+    </section>
+
+
+    <!-- Prediction Section -->
+
+    <section class="section">
+
+        <div class="prediction-container">
+
+            <!-- Input -->
+
+            <div class="prediction-form">
+
+                <h2>
+                    Environmental Data
+                </h2>
+
+                <p>
+                    Enter the current monitoring values.
+                </p>
+
+
+                <!-- Rainfall -->
+
+                <label for="rainfallInput">
+                    🌧️ Rainfall (mm)
+                </label>
+
+                <input
+                    type="number"
+                    id="rainfallInput"
+                    placeholder="Example: 80"
+                    min="0"
+                >
+
+
+                <!-- Water Level -->
+
+                <label for="waterInput">
+                    🌊 Water Level (meters)
+                </label>
+
+                <input
+                    type="number"
+                    id="waterInput"
+                    placeholder="Example: 2.5"
+                    min="0"
+                    step="0.1"
+                >
+
+
+                <!-- Drainage -->
+
+                <label for="drainageInput">
+                    🚧 Drainage Condition
+                </label>
+
+                <select id="drainageInput">
+
+                    <option value="normal">
+                        Normal
+                    </option>
+
+                    <option value="partial">
+                        Partial Blockage
+                    </option>
+
+                    <option value="blocked">
+                        Blocked
+                    </option>
+
+                </select>
+
+
+                <!-- Predict Button -->
+
+                <button onclick="predictFlood()">
+                    🤖 Predict Flood Risk
+                </button>
+
+            </div>
+
+
+            <!-- Result -->
+
+            <div class="prediction-result">
+
+                <div class="result-icon">
+                    🌊
+                </div>
+
+                <h3>
+                    Prediction Result
+                </h3>
+
+                <div id="predictionResult">
+                    WAITING
+                </div>
+
+                <p id="predictionMessage">
+                    Enter the environmental data
+                    and click Predict.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Risk Classification -->
+
+    <section class="section risk-section">
+
+        <h2>
+            Risk Classification
+        </h2>
+
+        <p class="section-description">
+            Flood risk is classified based on environmental conditions.
+        </p>
+
+
+        <div class="risk-levels">
+
+            <!-- Low -->
+
+            <div class="risk-level low-risk">
+
+                <h3>
+                    🟢 LOW RISK
+                </h3>
+
+                <p>
+                    Normal rainfall and water levels.
+                </p>
+
+            </div>
+
+
+            <!-- Medium -->
+
+            <div class="risk-level medium-risk">
+
+                <h3>
+                    🟠 MEDIUM RISK
+                </h3>
+
+                <p>
+                    Increasing rainfall or water levels.
+                </p>
+
+            </div>
+
+
+            <!-- High -->
+
+            <div class="risk-level high-risk">
+
+                <h3>
+                    🔴 HIGH RISK
+                </h3>
+
+                <p>
+                    Heavy rainfall, high water levels
+                    or severe drainage blockage.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Prediction Information -->
+
+    <section class="prediction-section">
+
+        <div class="prediction-box">
+
+            <div>
+
+                <p class="tag">
+                    DECISION SUPPORT
+                </p>
+
+                <h2>
+                    How the Prediction Works
+                </h2>
+
+                <p>
+                    The system considers rainfall,
+                    water level and drainage conditions
+                    to estimate flood risk.
+                </p>
+
+            </div>
+
+
+            <div class="risk-card">
+
+                <span>
+                    Prediction Status
+                </span>
+
+                <h2>
+                    READY
+                </h2>
+
+                <p>
+                    Waiting for environmental data.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🌊 AI-Based Flood Management System
+        </h3>
+
+        <p>
+            Smart Monitoring • Prediction • Early Warning • Mitigation
+        </p>
+
+        <p class="copyright">
+            © 2026 AI Flood Management Project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Drainage Monitoring</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <div class="logo">
+            🌊 AI Flood Management
+        </div>
+
+        <nav>
+
+             <a href="index.html">Home</a>
+               <a href="monitoring.html">Monitoring</a>
+               <a href="prediction.html">Prediction</a>
+               <a href="flood-map.html">Flood Map</a>
+               <a href="alerts.html">Alerts</a>
+               <a href="dashboard.html">Dashboard</a>
+               <a href="drainage.html" class="active">Drainage</a>
+               <a href="evacuation.html">Evacuation</a>
+               <a href="rainfall.html">Rainfall</a>
+               <a href="mitigation.html">Mitigation</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="page-header">
+
+        <p class="tag">
+            DRAINAGE MONITORING
+        </p>
+
+        <h1>
+            Drainage & Blockage Detection
+        </h1>
+
+        <p>
+            Monitor drainage networks and identify possible
+            blockages that may increase flood risk.
+        </p>
+
+    </section>
+
+
+    <!-- Overall Status -->
+
+    <section class="section">
+
+        <h2>
+            Drainage Network Status
+        </h2>
+
+        <div class="drainage-overview">
+
+            <div class="drainage-status-card">
+
+                <div class="icon">
+                    🚧
+                </div>
+
+                <h3>
+                    Network Status
+                </h3>
+
+                <div class="big-status"
+                     id="networkStatus">
+                    OPERATIONAL
+                </div>
+
+                <p>
+                    Overall drainage condition
+                </p>
+
+            </div>
+
+
+            <div class="drainage-status-card">
+
+                <div class="icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Last Scan
+                </h3>
+
+                <div class="big-status"
+                     id="lastScan">
+                    NOT SCANNED
+                </div>
+
+                <p>
+                    Automated monitoring status
+                </p>
+
+            </div>
+
+
+            <div class="drainage-status-card">
+
+                <div class="icon">
+                    ⚠️
+                </div>
+
+                <h3>
+                    Issues Detected
+                </h3>
+
+                <div class="big-status"
+                     id="issueCount">
+                    3
+                </div>
+
+                <p>
+                    Current reported issues
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Drainage Locations -->
+
+    <section class="section drainage-section">
+
+        <h2>
+            Drainage Locations
+        </h2>
+
+        <p class="section-description">
+            Current condition of monitored drainage points.
+        </p>
+
+
+        <div class="drainage-table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Location
+                        </th>
+
+                        <th>
+                            Drain ID
+                        </th>
+
+                        <th>
+                            Flow
+                        </th>
+
+                        <th>
+                            Blockage
+                        </th>
+
+                        <th>
+                            Severity
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Riverside Area
+                        </td>
+
+                        <td>
+                            DR-001
+                        </td>
+
+                        <td>
+                            Low
+                        </td>
+
+                        <td>
+                            Detected
+                        </td>
+
+                        <td>
+                            🔴 High
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Central Lowland
+                        </td>
+
+                        <td>
+                            DR-002
+                        </td>
+
+                        <td>
+                            Medium
+                        </td>
+
+                        <td>
+                            Partial
+                        </td>
+
+                        <td>
+                            🟠 Medium
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            North Residential
+                        </td>
+
+                        <td>
+                            DR-003
+                        </td>
+
+                        <td>
+                            High
+                        </td>
+
+                        <td>
+                            None
+                        </td>
+
+                        <td>
+                            🟢 Low
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            East Junction
+                        </td>
+
+                        <td>
+                            DR-004
+                        </td>
+
+                        <td>
+                            Low
+                        </td>
+
+                        <td>
+                            Detected
+                        </td>
+
+                        <td>
+                            🔴 High
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- Blockage Detection -->
+
+    <section class="prediction-section">
+
+        <div class="blockage-container">
+
+            <div>
+
+                <p class="tag">
+                    AUTOMATED DETECTION
+                </p>
+
+                <h2>
+                    Drainage Blockage Scanner
+                </h2>
+
+                <p>
+                    Scan the drainage network to simulate detection
+                    of blocked or partially blocked drainage points.
+                </p>
+
+                <button onclick="scanDrainage()">
+                    🔍 Scan Drainage Network
+                </button>
+
+            </div>
+
+
+            <div class="scan-result">
+
+                <div class="scan-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Scan Result
+                </h3>
+
+                <div id="scanStatus">
+                    READY
+                </div>
+
+                <p id="scanMessage">
+                    Start a scan to check drainage conditions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Maintenance Recommendations -->
+
+    <section class="section">
+
+        <h2>
+            Maintenance Recommendations
+        </h2>
+
+        <p class="section-description">
+            Recommended actions based on detected drainage conditions.
+        </p>
+
+
+        <div class="recommendations">
+
+            <div class="recommendation-card">
+
+                <div class="recommendation-icon">
+                    🧹
+                </div>
+
+                <h3>
+                    Remove Blockage
+                </h3>
+
+                <p>
+                    Inspect and clear blocked drainage points
+                    in high-risk locations.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-card">
+
+                <div class="recommendation-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Drain Maintenance
+                </h3>
+
+                <p>
+                    Perform regular maintenance to improve
+                    drainage flow.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-card">
+
+                <div class="recommendation-icon">
+                    📡
+                </div>
+
+                <h3>
+                    Continuous Monitoring
+                </h3>
+
+                <p>
+                    Continue monitoring drainage conditions
+                    during heavy rainfall.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🌊 AI-Based Flood Management System
+        </h3>
+
+        <p>
+            Smart Monitoring • Prediction • Early Warning • Mitigation
+        </p>
+
+        <p class="copyright">
+            © 2026 AI Flood Management Project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
