@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Rainfall Analysis</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <div class="logo">
+            🌊 AI Flood Management
+        </div>
+
+        <nav>
+
+             <a href="index.html">Home</a>
+               <a href="monitoring.html">Monitoring</a>
+               <a href="prediction.html">Prediction</a>
+               <a href="flood-map.html">Flood Map</a>
+               <a href="alerts.html">Alerts</a>
+               <a href="dashboard.html">Dashboard</a>
+               <a href="drainage.html">Drainage</a>
+               <a href="evacuation.html">Evacuation</a>
+               <a href="rainfall.html" class="active">Rainfall</a>
+               <a href="mitigation.html">Mitigation</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="page-header">
+
+        <p class="tag">
+            WEATHER ANALYSIS
+        </p>
+
+        <h1>
+            Rainfall Analysis
+        </h1>
+
+        <p>
+            Monitor rainfall patterns and identify conditions
+            that may contribute to flood risk.
+        </p>
+
+    </section>
+
+
+    <!-- Current Rainfall -->
+
+    <section class="section">
+
+        <h2>
+            Current Rainfall Conditions
+        </h2>
+
+        <div class="rainfall-overview">
+
+            <div class="rainfall-card">
+
+                <div class="rain-icon">
+                    🌧️
+                </div>
+
+                <h3>
+                    Current Rainfall
+                </h3>
+
+                <div class="rain-value"
+                     id="rainValue">
+                    82
+                </div>
+
+                <p>
+                    mm / 24 hours
+                </p>
+
+            </div>
+
+
+            <div class="rainfall-card">
+
+                <div class="rain-icon">
+                    💧
+                </div>
+
+                <h3>
+                    Rainfall Intensity
+                </h3>
+
+                <div class="rain-value"
+                     id="rainIntensity">
+                    HEAVY
+                </div>
+
+                <p>
+                    Current intensity
+                </p>
+
+            </div>
+
+
+            <div class="rainfall-card">
+
+                <div class="rain-icon">
+                    📈
+                </div>
+
+                <h3>
+                    Flood Contribution
+                </h3>
+
+                <div class="rain-value"
+                     id="rainContribution">
+                    HIGH
+                </div>
+
+                <p>
+                    Estimated contribution
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Rainfall Chart -->
+
+    <section class="section rainfall-chart-section">
+
+        <h2>
+            Weekly Rainfall Trend
+        </h2>
+
+        <p class="section-description">
+            Example rainfall measurements recorded over the last seven days.
+        </p>
+
+
+        <div class="rainfall-chart">
+
+            <div class="rain-bar"
+                 style="height: 35%;">
+
+                <span>
+                    35
+                </span>
+
+                <label>
+                    Mon
+                </label>
+
+            </div>
+
+
+            <div class="rain-bar"
+                 style="height: 50%;">
+
+                <span>
+                    50
+                </span>
+
+                <label>
+                    Tue
+                </label>
+
+            </div>
+
+
+            <div class="rain-bar"
+                 style="height: 42%;">
+
+                <span>
+                    42
+                </span>
+
+                <label>
+                    Wed
+                </label>
+
+            </div>
+
+
+            <div class="rain-bar"
+                 style="height: 68%;">
+
+                <span>
+                    68
+                </span>
+
+                <label>
+                    Thu
+                </label>
+
+            </div>
+
+
+            <div class="rain-bar"
+                 style="height: 90%;">
+
+                <span>
+                    90
+                </span>
+
+                <label>
+                    Fri
+                </label>
+
+            </div>
+
+
+            <div class="rain-bar"
+                 style="height: 65%;">
+
+                <span>
+                    65
+                </span>
+
+                <label>
+                    Sat
+                </label>
+
+            </div>
+
+
+            <div class="rain-bar"
+                 style="height: 55%;">
+
+                <span>
+                    55
+                </span>
+
+                <label>
+                    Sun
+                </label>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Rainfall Categories -->
+
+    <section class="section">
+
+        <h2>
+            Rainfall Intensity Categories
+        </h2>
+
+        <p class="section-description">
+            Rainfall can be categorized according to intensity.
+        </p>
+
+
+        <div class="rainfall-categories">
+
+            <div class="rain-category low-rain">
+
+                <h3>
+                    🟢 Low
+                </h3>
+
+                <strong>
+                    0 – 25 mm
+                </strong>
+
+                <p>
+                    Normal rainfall conditions.
+                </p>
+
+            </div>
+
+
+            <div class="rain-category moderate-rain">
+
+                <h3>
+                    🟠 Moderate
+                </h3>
+
+                <strong>
+                    26 – 50 mm
+                </strong>
+
+                <p>
+                    Increased monitoring recommended.
+                </p>
+
+            </div>
+
+
+            <div class="rain-category heavy-rain">
+
+                <h3>
+                    🔴 Heavy
+                </h3>
+
+                <strong>
+                    51 – 100 mm
+                </strong>
+
+                <p>
+                    Increased flood risk may occur.
+                </p>
+
+            </div>
+
+
+            <div class="rain-category extreme-rain">
+
+                <h3>
+                    🚨 Extreme
+                </h3>
+
+                <strong>
+                    &gt; 100 mm
+                </strong>
+
+                <p>
+                    Significant flood risk possible.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Rainfall Analysis -->
+
+    <section class="prediction-section">
+
+        <div class="rain-analysis">
+
+            <div>
+
+                <p class="tag">
+                    AUTOMATED ANALYSIS
+                </p>
+
+                <h2>
+                    Analyze Current Rainfall
+                </h2>
+
+                <p>
+                    Analyze the current rainfall value and
+                    estimate its contribution to flood risk.
+                </p>
+
+                <button onclick="analyzeRainfall()">
+                    🌧️ Analyze Rainfall
+                </button>
+
+            </div>
+
+
+            <div class="rain-analysis-result">
+
+                <h3>
+                    Analysis Result
+                </h3>
+
+                <div id="rainAnalysisStatus">
+                    READY
+                </div>
+
+                <p id="rainAnalysisMessage">
+                    Click the button to analyze rainfall conditions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🌊 AI-Based Flood Management System
+        </h3>
+
+        <p>
+            Smart Monitoring • Prediction • Early Warning • Mitigation
+        </p>
+
+        <p class="copyright">
+            © 2026 AI Flood Management Project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

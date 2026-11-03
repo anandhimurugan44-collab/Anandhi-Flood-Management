@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Alerts</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <div class="logo">
+            🌊 AI Flood Management
+        </div>
+
+        <nav>
+
+             <a href="index.html">Home</a>
+               <a href="monitoring.html">Monitoring</a>
+               <a href="prediction.html">Prediction</a>
+               <a href="flood-map.html">Flood Map</a>
+               <a href="alerts.html" class="active">Alerts</a>
+               <a href="dashboard.html">Dashboard</a>
+               <a href="drainage.html">Drainage</a>
+               <a href="evacuation.html">Evacuation</a>
+               <a href="rainfall.html">Rainfall</a>
+               <a href="mitigation.html">Mitigation</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="page-header">
+
+        <p class="tag">
+            EARLY WARNING SYSTEM
+        </p>
+
+        <h1>
+            Emergency Alerts
+        </h1>
+
+        <p>
+            Monitor flood warnings and emergency situations.
+        </p>
+
+    </section>
+
+
+    <!-- Current Alert -->
+
+    <section class="section">
+
+        <div class="current-alert">
+
+            <div class="alert-symbol">
+                ⚠️
+            </div>
+
+            <div class="alert-content">
+
+                <span class="alert-label">
+                    CURRENT WARNING
+                </span>
+
+                <h2 id="currentAlertTitle">
+                    HIGH FLOOD RISK
+                </h2>
+
+                <p id="currentAlertMessage">
+                    Heavy rainfall and rising water levels
+                    require immediate attention.
+                </p>
+
+                <p class="alert-time">
+                    Last updated: <span id="alertTime">Now</span>
+                </p>
+
+            </div>
+
+            <button onclick="acknowledgeAlert()">
+                Acknowledge
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Warning Levels -->
+
+    <section class="section warning-section">
+
+        <h2>
+            Flood Warning Levels
+        </h2>
+
+        <p class="section-description">
+            Different warning levels indicate different levels of risk.
+        </p>
+
+
+        <div class="warning-levels">
+
+            <div class="warning-card safe">
+
+                <div class="warning-icon">
+                    🟢
+                </div>
+
+                <h3>
+                    LOW
+                </h3>
+
+                <p>
+                    Normal environmental conditions.
+                </p>
+
+            </div>
+
+
+            <div class="warning-card moderate">
+
+                <div class="warning-icon">
+                    🟠
+                </div>
+
+                <h3>
+                    MEDIUM
+                </h3>
+
+                <p>
+                    Increased monitoring is recommended.
+                </p>
+
+            </div>
+
+
+            <div class="warning-card danger">
+
+                <div class="warning-icon">
+                    🔴
+                </div>
+
+                <h3>
+                    HIGH
+                </h3>
+
+                <p>
+                    Immediate preparedness is recommended.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Alert History -->
+
+    <section class="section">
+
+        <h2>
+            Alert History
+        </h2>
+
+        <p class="section-description">
+            Recent flood-related system alerts.
+        </p>
+
+
+        <div class="alert-table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Time
+                        </th>
+
+                        <th>
+                            Location
+                        </th>
+
+                        <th>
+                            Alert
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            09:30 AM
+                        </td>
+
+                        <td>
+                            Riverside Area
+                        </td>
+
+                        <td>
+                            High Flood Risk
+                        </td>
+
+                        <td>
+                            🔴 Active
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            08:45 AM
+                        </td>
+
+                        <td>
+                            Central Lowland
+                        </td>
+
+                        <td>
+                            Water Level Rising
+                        </td>
+
+                        <td>
+                            🟠 Monitoring
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            07:20 AM
+                        </td>
+
+                        <td>
+                            East Junction
+                        </td>
+
+                        <td>
+                            Drainage Blockage
+                        </td>
+
+                        <td>
+                            🟡 Maintenance
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Yesterday
+                        </td>
+
+                        <td>
+                            North Area
+                        </td>
+
+                        <td>
+                            Heavy Rainfall
+                        </td>
+
+                        <td>
+                            🟢 Resolved
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- Emergency Action -->
+
+    <section class="prediction-section">
+
+        <div class="emergency-action">
+
+            <div>
+
+                <p class="tag">
+                    EMERGENCY RESPONSE
+                </p>
+
+                <h2>
+                    Emergency Preparedness
+                </h2>
+
+                <p>
+                    Based on the current flood risk, residents
+                    in vulnerable areas should follow official
+                    emergency instructions and move to designated
+                    safe locations when advised.
+                </p>
+
+            </div>
+
+
+            <div class="emergency-buttons">
+
+                <button onclick="generateAlert()">
+                    🚨 Generate Alert
+                </button>
+
+                <button onclick="showEvacuation()">
+                    🏃 Evacuation Advice
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div id="alertOutput"
+             class="alert-output">
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🌊 AI-Based Flood Management System
+        </h3>
+
+        <p>
+            Smart Monitoring • Prediction • Early Warning • Mitigation
+        </p>
+
+        <p class="copyright">
+            © 2026 AI Flood Management Project
+        </p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
